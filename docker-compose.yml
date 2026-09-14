@@ -1,0 +1,24 @@
+# Optional: real PostgreSQL for local dev, matching the spec's tech stack.
+# The backend runs perfectly well against the default SQLite file with
+# zero setup -- switch DATABASE_URL in backend/.env to the line below
+# once you want to develop against Postgres (e.g. before your final
+# demo/submission, or once you start writing migrations).
+#
+# Usage:  docker compose up -d
+# Then in backend/.env:
+#   DATABASE_URL=postgresql+psycopg2://medassist:medassist@localhost:5432/medassist
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: medassist
+      POSTGRES_PASSWORD: medassist
+      POSTGRES_DB: medassist
+    ports:
+      - "5432:5432"
+    volumes:
+      - medassist_pgdata:/var/lib/postgresql/data
+
+volumes:
+  medassist_pgdata:

@@ -1,0 +1,28 @@
+# --- Web framework ---
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+
+# --- Database ---
+SQLAlchemy==2.0.36
+psycopg2-binary==2.9.10
+alembic==1.14.0
+
+# --- Auth / security ---
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.0.1
+python-multipart==0.0.20
+
+# --- Config / validation ---
+pydantic==2.10.3
+pydantic-settings==2.6.1
+
+# --- PDF extraction (phase 3) ---
+pdfplumber==0.11.4
+
+# --- Vector store / RAG (phase 5) ---
+chromadb==0.5.23
+
+# --- Testing ---
+pytest==8.3.4
+httpx==0.28.1

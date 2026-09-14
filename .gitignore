@@ -1,0 +1,21 @@
+# --- Python / backend ---
+backend/venv/
+backend/**/__pycache__/
+backend/**/*.pyc
+backend/medassist.db
+backend/.env
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# --- Node / frontend ---
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# --- Editors / OS ---
+.vscode/
+.DS_Store
+Thumbs.db
+
+# --- misc ---
+*.log
